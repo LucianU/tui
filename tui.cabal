@@ -14,7 +14,7 @@ category:            Development
 build-type:          Simple
 extra-doc-files:     README.md
                    , CHANGELOG.md
-tested-with:         GHC == 8.4.4
+tested-with:         GHC == 8.6.5
 
 source-repository head
   type:                git
@@ -25,7 +25,8 @@ library
   exposed-modules:     Tui
                        Prelude
 
-  build-depends:       base-noprelude ^>= 4.11.1.0
+  build-depends:       base-noprelude ^>= 4.12.0.0
+                     , brick
                      , protolude
 
   ghc-options:         -Wall
@@ -59,7 +60,7 @@ executable tui
   hs-source-dirs:      app
   main-is:             Main.hs
 
-  build-depends:       base-noprelude ^>= 4.11.1.0
+  build-depends:       base-noprelude ^>= 4.12.0.0
                      , tui
                      , protolude
 
@@ -98,7 +99,7 @@ test-suite tui-test
   hs-source-dirs:      test
   main-is:             Spec.hs
 
-  build-depends:       base-noprelude ^>= 4.11.1.0
+  build-depends:       base-noprelude ^>= 4.12.0.0
                      , tui
                      , protolude
 
@@ -137,7 +138,7 @@ benchmark tui-benchmark
   hs-source-dirs:      benchmark
   main-is:             Main.hs
 
-  build-depends:       base-noprelude ^>= 4.11.1.0
+  build-depends:       base-noprelude ^>= 4.12.0.0
                      , gauge
                      , tui
                      , protolude
